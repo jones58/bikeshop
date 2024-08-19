@@ -7,6 +7,10 @@ export const GET_SHOP_ITEMS = gql`
           id
           title
           description
+          featuredImage {
+            altText
+            url
+          }
         }
       }
     }

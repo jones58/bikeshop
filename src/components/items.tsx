@@ -6,8 +6,9 @@ interface Item {
   id: string;
   title: string;
   description: string;
-  image: {
-    originalSrc: string;
+  featuredImage: {
+    altText: string;
+    url: string;
   };
 }
 
@@ -35,6 +36,7 @@ const Items: React.FC = () => {
             <div>
               <strong>{item.title}</strong>
               <p>{item.description}</p>
+              <img src={item.featuredImage.url} alt={item.title} />
             </div>
           </li>
         ))}

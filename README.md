@@ -4,13 +4,16 @@ A bike shop website for my favourite bikes - Using NextJS, Apollo and Shopify
 
 ## Planning
 
-## Building
+- Gathered inspiration sites in an Are.na folder
+- Planned out the design in
+
+## Building and Debugging
 
 - Set up a Vite project with React and TypeScript.
 - Followed a basic GraphQL and Apollo setup [here](https://www.telerik.com/blogs/leveraging-graphql-apollo-client-efficient-data-fetching-state-management-api-driven-apps?ref=dailydev) guide to get started with it.
 - Set up a Shopify store for development purposes and a Shopify app to acess the data via GraphQL API.
-
-## Debugging
+- Edited my previous GraphQL and Apollo setup to use Shopify's API. This took awhile to get right, using the console I was able to debug.
+- The Apollo Chrome extension was very useful for writing GraphQL queries, in particular the Explorer tab.
 
 ## Editing locally
 
