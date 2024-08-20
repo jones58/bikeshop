@@ -14,6 +14,7 @@ A bike shop website for my favourite bikes - Using NextJS, Apollo and Shopify
 - Set up a Shopify store for development purposes and a Shopify app to acess the data via GraphQL API.
 - Edited my previous GraphQL and Apollo setup to use Shopify's API. This took awhile to get right, using the console I was able to debug.
 - The Apollo Chrome extension was very useful for writing GraphQL queries, in particular the Explorer tab.
+- Added Storybook to the project. This can be run with `npm run storybook`.
 
 ## Editing locally
 

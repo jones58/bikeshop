@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_SHOP_ITEMS } from "../Graphql/queries";
+import ProductCard from "./productCard";
 
 interface Item {
   id: string;
@@ -33,11 +34,7 @@ const Items: React.FC = () => {
       <ul className="Items-grid">
         {data?.products.edges.map(({ node: item }) => (
           <li key={item.id}>
-            <div>
-              <strong>{item.title}</strong>
-              <p>{item.description}</p>
-              <img src={item.featuredImage.url} alt={item.title} />
-            </div>
+            <ProductCard {...item} />
           </li>
         ))}
       </ul>
