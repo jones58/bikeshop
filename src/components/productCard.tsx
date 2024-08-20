@@ -9,18 +9,20 @@ export default function ProductCard({
   description: string;
   imageURL: string;
   imageAlt: string;
-  price: number;
+  price: string;
 }) {
   return (
-    <div className="p-5">
-      <img
-        src={imageURL}
-        alt={imageAlt}
-        className="w-[300px] h-[300px] object-cover object-center"
-      />
+    <div className="w-[300px]">
+      <div className="overflow-hidden">
+        <img
+          src={imageURL}
+          alt={imageAlt}
+          className="w-[300px] h-[300px] object-cover object-center hover:scale-105 transition-transform duration-300 ease-in-out"
+        />
+      </div>
       <div className="flex flex-row justify-between items-start">
-        <h2 className="text-xl">{title}</h2>
-        <p>{price}</p>
+        <h2 className="text-lg py-5">{title}</h2>
+        <p className="py-5 text-md">{price}</p>
       </div>
       <p>{description}</p>
     </div>

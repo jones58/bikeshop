@@ -11,7 +11,12 @@ interface Item {
     altText: string;
     url: string;
   };
-  price: number;
+  priceRange: {
+    minVariantPrice: {
+      amount: number;
+      currencyCode: string;
+    };
+  };
 }
 
 interface ShopItemsData {
@@ -29,6 +34,16 @@ const Items: React.FC = () => {
   if (loading) return <p>Loading items...</p>;
   if (error) return <p>Error fetching items</p>;
 
+  const formatPrice = (amount: string, currencyCode: string) => {
+    const price = parseFloat(amount);
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: currencyCode,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(price);
+  };
+
   return (
     <div>
       <ul className="grid grid-cols-5">
@@ -39,7 +54,10 @@ const Items: React.FC = () => {
               description={item.description}
               imageURL={item.featuredImage.url}
               imageAlt={item.featuredImage.altText}
-              price={item.price}
+              price={formatPrice(
+                item.priceRange.minVariantPrice.amount,
+                item.priceRange.minVariantPrice.currencyCode
+              )}
             />
           </li>
         ))}

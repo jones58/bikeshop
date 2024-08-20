@@ -11,6 +11,12 @@ export const GET_SHOP_ITEMS = gql`
             altText
             url
           }
+          priceRange {
+            minVariantPrice {
+              amount
+              currencyCode
+            }
+          }
         }
       }
     }
