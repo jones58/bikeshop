@@ -13,7 +13,7 @@ interface Item {
   };
   priceRange: {
     minVariantPrice: {
-      amount: number;
+      amount: string;
       currencyCode: string;
     };
   };
