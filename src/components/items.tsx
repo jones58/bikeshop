@@ -11,6 +11,7 @@ interface Item {
     altText: string;
     url: string;
   };
+  price: number;
 }
 
 interface ShopItemsData {
@@ -30,11 +31,16 @@ const Items: React.FC = () => {
 
   return (
     <div>
-      <h2>Item List</h2>
-      <ul className="Items-grid">
+      <ul className="grid grid-cols-5">
         {data?.products.edges.map(({ node: item }) => (
           <li key={item.id}>
-            <ProductCard {...item} />
+            <ProductCard
+              title={item.title}
+              description={item.description}
+              imageURL={item.featuredImage.url}
+              imageAlt={item.featuredImage.altText}
+              price={item.price}
+            />
           </li>
         ))}
       </ul>

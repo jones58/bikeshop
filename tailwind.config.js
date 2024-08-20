@@ -2,7 +2,12 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Univers: ["Univers"],
+        UniversBold: ["Univers-Bold"],
+      },
+    },
   },
   plugins: [],
 };

@@ -6,14 +6,28 @@
 
 @font-face {
   font-family: "Univers";
-  src: url("../public/fonts/NunitoSans-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 400 900;
-  font-display: swap;
+  src: url("../public/fonts/UniversLTStd/UniversLTStd.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers-Bold";
+  src: url("../public/fonts/UniversLTStd/UniversLTStd-BoldEx.otf")
+    format("opentype");
+  font-weight: 800;
   font-style: normal;
 }
 
 body {
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  @apply bg-neutral-50 font-Univers;
+}
+
+header {
+  @apply font-UniversBold;
+}
+
+* {
+  @apply text-neutral-800;
 }

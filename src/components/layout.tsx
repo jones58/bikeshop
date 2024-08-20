@@ -7,7 +7,7 @@ export default function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen">
       <Header />
       {children}
       <Footer />
