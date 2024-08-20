@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer>
-      <div className="bg-neutral-800 h-10 w-full p-10 flex justify-between items-center text-md">
+    <footer className="absolute bottom-0 w-full">
+      <div className="bg-neutral-800 h-10 p-10 flex justify-between items-center text-md">
         <a
           href="https://github.com/jones58/bikeshop"
           target="_blank"
